@@ -1,0 +1,263 @@
+@mixin tablets {
+  @media screen and(min-width:700px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and(min-width:1000px) {
+    @content;
+  }
+}
+.sortList {
+  cursor: pointer;
+}
+
+.bi-check2 {
+  cursor: pointer;
+}
+.checked {
+  color: green;
+}
+.notchecked {
+  color: black;
+}
+.bullet-body {
+  background-color: rgb(241, 191, 199);
+  .bullet-header {
+    display: flex;
+    justify-content: center;
+
+    .bullet-heading {
+      font-family: fantasy;
+    }
+  }
+
+  .bullet-container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    .bullet-article {
+      width: 45%;
+      height: 50vh;
+      padding-bottom: 10px;
+
+      background-color: rgb(226, 166, 201);
+
+      .heading-article {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          margin: 0;
+          width: 90%;
+          text-align: center;
+        }
+      }
+    }
+
+    .bullet-last-article {
+      width: 90%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+
+      .notes {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        height: 20%;
+
+        .undo {
+          width: 85%;
+          display: flex;
+          justify-content: flex-end;
+          cursor: pointer;
+
+          .bi-arrow-repeat {
+            font-size: 16pt;
+          }
+        }
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+
+        #noteInput {
+          height: 20px;
+        }
+      }
+
+      .list-ul {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .list-checked {
+        text-decoration: line-through;
+      }
+    }
+
+    .white {
+      background-color: whitesmoke;
+    }
+  }
+
+  .bullet-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    .bullet-input {
+      display: flex;
+      justify-content: center;
+      height: 30px;
+      width: 90%;
+
+      .add-button {
+        background-color: whitesmoke;
+        border-radius: 5px;
+        border: 0;
+      }
+    }
+
+    .space {
+      background-color: whitesmoke;
+      border-radius: 5px;
+
+      .back {
+        cursor: pointer;
+        text-align: center;
+      }
+      @include tablets() {
+        width: 15%;
+      }
+    }
+    .heart {
+      display: none;
+
+      @include tablets() {
+        display: contents;
+        width: 5%;
+      }
+    }
+  }
+
+  .bullet-list {
+    width: 90%;
+    padding: 5px;
+    border-bottom: dotted 2px black;
+
+    .bi-trash-fill {
+      position: relative;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  .bullet-second-list {
+    list-style: square;
+    color: rgba(155, 146, 146, 0.76);
+    font-size: 20pt;
+    border-bottom: grey solid 2px;
+    width: 90%;
+  }
+}
+
+.post-it-body {
+  background-color: rgb(83, 78, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets() {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .post-it-container {
+    height: 100vh;
+    width: 80vw;
+
+    @include tablets() {
+      width: 30vw;
+    }
+
+    .post-its {
+      width: 100%;
+      height: 30%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .header-box {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .green {
+    background-color: rgb(173, 228, 62);
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .pink {
+    background-color: rgb(223, 67, 171);
+  }
+  .blue {
+    background-color: rgb(96, 151, 233);
+  }
+  .post-it-big-container {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    background-color: rgb(223, 67, 171);
+    @include tablets() {
+      width: 60vw;
+    }
+
+    .date-box {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .date {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        padding-left: 5px;
+        .box {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .note-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .post-it-notes {
+      width: 90%;
+      height: 30%;
+    }
+  }
+}

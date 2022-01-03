@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <script defer src="main.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body class="bullet-body">
+    <header class="bullet-header">
+      <h1 class="bullet-heading">My to do list</h1>
+    </header>
+    <section class="bullet-container">
+      <article class="bullet-article">
+        <div class="white heading-article">
+          <i class="bi bi-suit-heart-fill"></i>
+          <h4>Urgent!</h4>
+
+          <div class="sortList"><p>Sort list A-Ö</p></div>
+        </div>
+
+        <div class="bullet-input-container">
+          <div class="heart">
+            <i class="bi bi-suit-heart-fill"></i>
+          </div>
+
+          <div class="bullet-input">
+            <input type="text" id="input" placeholder="Write a todo" />
+            <button class="add-button">Add</button>
+          </div>
+          <div class="space">
+            <div class="back"><p>Go back</p></div>
+          </div>
+        </div>
+        <ol id="ol" class="ul"></ol>
+      </article>
+      <article class="bullet-article white">
+        <div class="heading-article">
+          <i class="bi bi-suit-heart-fill"></i>
+          <h4>Things to do this week!</h4>
+        </div>
+        <ol>
+          <li class="bullet-second-list"></li>
+          <li class="bullet-second-list"></li>
+          <li class="bullet-second-list"></li>
+          <li class="bullet-second-list"></li>
+          <li class="bullet-second-list"></li>
+          <li class="bullet-second-list"></li>
+        </ol>
+      </article>
+      <article class="bullet-last-article white">
+        <div class="notes">
+          <i class="bi bi-suit-heart-fill"></i>
+          <h4>Notes</h4>
+          <div class="undo">
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+        </div>
+        <div class="input-container">
+          <input id="noteInput" type="text" />
+          <button class="bullet-notes">Add note</button>
+        </div>
+        <ul id="ul">
+          <li class="list-ul">Bara listan ovanför funkar :)</li>
+          <li class="list-ul">Pay bills</li>
+        </ul>
+      </article>
+    </section>
+  </body>
+</html>
