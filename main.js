@@ -1,8 +1,7 @@
 class Todos {
-  constructor(todo, done, sort) {
+  constructor(todo, done) {
     this.todo = todo;
     this.done = done;
-    this.sort = sort;
   }
 }
 
@@ -15,15 +14,13 @@ window.onload = function () {
   doneNote();
   undo();
 };
-let todo1 = new Todos("träna", true, 2);
-let todo2 = new Todos("äta", true, 1);
-let todo3 = new Todos("sova", true, 3);
+let todo1 = new Todos("träna", true);
+let todo2 = new Todos("äta", true);
+let todo3 = new Todos("sova", true);
 
 let listOfObjects = [todo1, todo2, todo3];
 
-let listOfNewTodos = [todo1, todo2];
-
-let listOfDeletedItems = [];
+let listOfNewTodos = [todo1, todo2, todo3];
 
 function addTodo() {
   let addElement = document.querySelector(".add-button");
